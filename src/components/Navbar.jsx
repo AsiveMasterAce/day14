@@ -11,7 +11,7 @@ const Navbar = () => {
  return (
     <nav className="bg-white bg-opacity-60 dark:bg-gray-900 fixed w-full z-20 top-0 start-0 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-10" alt="My Drop Logo" />
           {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:bg-pink-700">My Drop</span> */}
         </a>
@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ${isOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a href="#" className="block py-2 px-3 text-white bg-pink-700 rounded md:bg-transparent md:text-pink-700 md:p-0 md:dark:text-pink-500" aria-current="page">Home</a>
+              <a href="" className="block py-2 px-3 text-white bg-pink-700 rounded md:bg-transparent md:text-pink-700 md:p-0 md:dark:text-pink-500" aria-current="page">Home</a>
             </li>
 {/* 
             <li>
