@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import Favicon from 'react-favicon';
+import logo from './Day14_logo.png';
 import './App.css';
+import Navbar from './components/Navbar'
+import Calculator from './components/OvulationFormCalculator'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+  useEffect(() => {
+    document.title = "Day 14";
+ }, []);
+  return (
+     <div className="App">
+       <Favicon url={logo} />
+       <Navbar />
+      <Calculator/>
+     </div>
+  );
+ }
+ 
+ export default App;

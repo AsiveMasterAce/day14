@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.highlight{
+  background-color: #ffb3c1 !important;
+}
+
+.react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus {
+  background: #ff5d8f !important;
+}
+
+.react-calendar__tile--active {
+  background: #a4133c !important;
+  color: white;
+}
+.react-calendar {
+  width: 100% !important;
+  max-width: 100%;
+  background: #ffffffc4 !important;
+  line-height: 1.125em;
+  border: none !important;
+  padding:0px 15px 0px 15px !important;
+}
+
+.react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+  background-color: #fff0f3 !important;
+}
+
+.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
+  background-color: #fff0f3 !important;
+}
+
+.react-calendar__tile--hasActive:enabled:hover, .react-calendar__tile--hasActive:enabled:focus {
+  background: #fff0f3 !important;
+  color: #a4133c !important;
+}
+
+
+.react-calendar__tile--hasActive {
+  background: #a4133c !important;
+  color: #fff0f3;
+}
+/* Original selector */
+.calendar-opacity-50 {
+  background-color: rgba(255, 255, 255, 0.5);
+ }
+ 
+ /* Increased specificity */
+ #myCalendar .calendar-opacity-50 {
+  background-color: rgba(255, 255, 255, 0.5);
+ }
+ 
