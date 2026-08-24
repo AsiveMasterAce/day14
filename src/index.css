@@ -16,44 +16,68 @@ code {
     monospace;
 }
 
-.highlight{
-  background-color: #ffb3c1 !important;
+.highlight {
+  background-color: #fbcfe8 !important;
+  color: #831843 !important;
+  font-weight: 700;
+  border-radius: 8px;
 }
 
 .react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus {
-  background: #ff5d8f !important;
+  background: #0f766e !important;
 }
 
 .react-calendar__tile--active {
-  background: #a4133c !important;
-  color: white;
+  background: #be185d !important;
+  color: white !important;
 }
 .react-calendar {
   width: 100% !important;
   max-width: 100%;
-  background: #ffffffc4 !important;
+  background: #ffffff !important;
+  color: #31242a;
   line-height: 1.125em;
-  border: none !important;
-  padding:0px 15px 0px 15px !important;
+  border: 1px solid #fbcfe8 !important;
+  border-radius: 8px;
+  padding: 12px !important;
+  box-shadow: 0 18px 40px rgba(131, 24, 67, 0.12);
+}
+
+.react-calendar button {
+  color: #31242a;
+  border-radius: 8px;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #0f766e !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #9ca3af !important;
+}
+
+.react-calendar__navigation button {
+  color: #831843;
+  font-weight: 700;
 }
 
 .react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
-  background-color: #fff0f3 !important;
+  background-color: #f0fdfa !important;
 }
 
 .react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
-  background-color: #fff0f3 !important;
+  background-color: #fff0f6 !important;
 }
 
 .react-calendar__tile--hasActive:enabled:hover, .react-calendar__tile--hasActive:enabled:focus {
   background: #fff0f3 !important;
-  color: #a4133c !important;
+  color: #831843 !important;
 }
 
 
 .react-calendar__tile--hasActive {
-  background: #a4133c !important;
-  color: #fff0f3;
+  background: #be185d !important;
+  color: #fff0f3 !important;
 }
 /* Original selector */
 .calendar-opacity-50 {

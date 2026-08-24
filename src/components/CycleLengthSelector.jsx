@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const CycleLengthSelector = ({ value, onChange, className }) => {
-  const [selectedCycleLength, setSelectedCycleLength] = useState(value || '28');
- 
   const handleChange = (event) => {
-     const newValue = event.target.value || ''; // Convert null or undefined to empty string
-     setSelectedCycleLength(newValue);
-     onChange(newValue); // Update the parent component's state
+     onChange(event.target.value);
   };
  
  return (
-    <div className="w-full max-w-xs">
+    <div className="w-full">
       <select
         id="averageLengthOfCycles"
-        name="ccycle"
-        value={selectedCycleLength}
+        name="cycleLength"
+        value={value}
         onChange={handleChange}
         className={className}
       >
@@ -24,7 +20,7 @@ const CycleLengthSelector = ({ value, onChange, className }) => {
         <option value="25">25 days</option>
         <option value="26">26 days</option>
         <option value="27">27 days</option>
-        <option value="28" selected>28 days</option>
+        <option value="28">28 days</option>
         <option value="29">29 days</option>
         <option value="30">30 days</option>
         <option value="31">31 days</option>
