@@ -16,11 +16,26 @@ code {
     monospace;
 }
 
+input,
+select,
+button {
+  font: inherit;
+}
+
+input[type="date"],
+select {
+  min-height: 48px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .highlight {
   background-color: #fbcfe8 !important;
   color: #831843 !important;
   font-weight: 700;
   border-radius: 8px;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
 }
 
 .react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus {
@@ -37,10 +52,9 @@ code {
   background: #ffffff !important;
   color: #31242a;
   line-height: 1.125em;
-  border: 1px solid #fbcfe8 !important;
+  border: none !important;
   border-radius: 8px;
   padding: 12px !important;
-  box-shadow: 0 18px 40px rgba(131, 24, 67, 0.12);
 }
 
 .react-calendar button {
@@ -79,6 +93,18 @@ code {
   background: #be185d !important;
   color: #fff0f3 !important;
 }
+
+.pdf-header {
+  display: none;
+}
+
+.pdf-exporting .pdf-header {
+  display: block;
+}
+
+.pdf-exporting .pdf-actions {
+  display: none;
+}
 /* Original selector */
 .calendar-opacity-50 {
   background-color: rgba(255, 255, 255, 0.5);
@@ -88,4 +114,57 @@ code {
  #myCalendar .calendar-opacity-50 {
   background-color: rgba(255, 255, 255, 0.5);
  }
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  * {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+
+  nav,
+  .app-intro,
+  .no-print,
+  .sparkle-field::before,
+  .sparkle-field::after {
+    display: none !important;
+  }
+
+  .pdf-header {
+    display: block !important;
+  }
+
+  main {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  .print-area {
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .react-calendar {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  .highlight {
+    background-color: #fbcfe8 !important;
+    color: #831843 !important;
+  }
+
+  .react-calendar__tile--active {
+    background: #be185d !important;
+    color: #ffffff !important;
+  }
+}
  
